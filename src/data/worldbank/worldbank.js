@@ -36719,5 +36719,4 @@ const WORLDBANK = {
     "dataSource": "Indicadores del desarrollo mundial",
     "lastUpdated": "2018-11-14"
   }
-}
-;;
+};

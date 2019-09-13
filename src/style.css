@@ -1,0 +1,14 @@
+body{
+    background-color: rgb(47, 184, 172);
+}
+.pesquisa{
+    background-color: rgb(133, 206, 255);
+    width: 25%;
+    padding: 0.6%;
+}
+::placeholder{
+    font-size: 11px;
+}
+#btn-pesquisa{
+    font-size: 12px;
+}

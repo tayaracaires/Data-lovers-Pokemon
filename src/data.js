@@ -1,8 +1,9 @@
-// esta é uma função de exemplo
-// veja como agregamos a função ao objeto global window
 
-const example = () => {
-  return "example";
-};
+function getName(name){
+  const results = POKEMON.pokemon.map(persona => persona.name === name );
+  return results;
+}
+//function searchName(name){
+//  const results = POKEMON.pokemon.filter(procNome => procNome.name === name.value)
+//}
 
-window.example = example;

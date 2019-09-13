@@ -1,20 +1,31 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Data Lovers</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div id="root"></div>
-    <!-- <script src="data/injuries/injuries.js"></script> -->
-    <!-- <script src="data/lol/lol.js"></script> -->
-    <!-- <script src="data/patient/patient.js"></script> -->
-    <!-- <script src="data/pokemon/pokemon.js"></script> -->
-    <!-- <script src="data/rickandmorty/rickandmorty.js"></script> -->
-    <!-- <script src="data/steam/steam.js"></script> -->
-    <!-- <script src="data/worldbank/worldbank.js"></script> -->
-    <script src="data.js"></script>
-    <script src="main.js"></script>
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <title>Data Lovers</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <fieldset class="pesquisa">
+  <input id="pesquisa" placeholder="pesquise aqui por nome">
+  <button id="btn-pesquisa">search</button>
+  </fieldset>
+  <div id="root"></div>
+    <div id="menu">
+      <ul>
+        <li><button id="btn-name">Pokemons</button></li>
+        <li><a href="#">Pokedex</a></li>
+      </ul>
+    </div>
+  
+    <div id="listaNomes"></div>
+    <div id="listaTipos"></div>
+  <script src="data/pokemon/pokemon.js"></script>
+  <script src="main.js"></script>
+  <script src="data.js"></script>
+
+
+</body>
+
 </html>

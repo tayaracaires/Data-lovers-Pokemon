@@ -6,25 +6,20 @@
   <title>Data Lovers</title>
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-  <fieldset class="pesquisa">
-  <input id="pesquisa" placeholder="pesquise aqui por nome">
-  <button id="btn-pesquisa">search</button>
-  </fieldset>
-  <div id="root"></div>
-    <div id="menu">
-      <ul>
-        <li><button id="btn-name">Pokemons</button></li>
-        <li><a href="#">Pokedex</a></li>
-      </ul>
-    </div>
-  
-    <div id="listaNomes"></div>
-    <div id="listaTipos"></div>
+  <header>
+  </header>
+  <main>
+    <input id="pesquisa" placeholder="pesquise aqui por nome">
+    <div class="filtro-tipos"></div>
+    <br>
+    <div class="container" id="listaCards"></div>
+  </main>
+
   <script src="data/pokemon/pokemon.js"></script>
   <script src="main.js"></script>
   <script src="data.js"></script>
-
 
 </body>
 

@@ -1,14 +1,50 @@
 body{
-    background-color: rgb(47, 184, 172);
+    background: url(oi.jpg) no-repeat center center fixed;
+    background-size: cover;
+    -webkit-background-size: cover; /* SAFARI / CHROME */
+    -moz-background-size: cover; /* FIREFOX */
+    -ms-background-size: cover; /* IE */
+    -o-background-size: cover; /* OPERA */
 }
-.pesquisa{
-    background-color: rgb(133, 206, 255);
-    width: 25%;
-    padding: 0.6%;
+header{
+    width: 1287px;
+    height: 310px;
+
+    background-image: url(image.jpeg);
+    border: 1px solid #D6FFFD;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
 }
-::placeholder{
-    font-size: 11px;
+#pesquisa{
+    margin-left: 42%;
+    margin-right: -42%;
+    margin-top: 1%;    
 }
-#btn-pesquisa{
-    font-size: 12px;
+/*cards item*/
+
+.container{
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.box{
+    width: 20%;
+    height: auto;
+    margin: 10px;
+    padding: 10px;
+    background-image: url("v.jpg");
+    border-radius: 10px;
+    text-align: center;
+    font-size: 14px;
+}
+.conteudoCard{
+
+    padding: 2px;
+    text-align: left;
+    font-size: 14px;
+    word-wrap: break-word;
+}
+
 }

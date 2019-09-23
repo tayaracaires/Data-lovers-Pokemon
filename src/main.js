@@ -27,7 +27,7 @@ function filterItens(dataPoke) {
 selectOrder.addEventListener("change", () => {
   const selectValue = selectOrder.value;
   const functionOrdena = window.sortData(dataPoke, "name", selectValue);
-
+  debugger;
   if (selectValue === "none") {
     filterItens(dataPoke);
   } else {

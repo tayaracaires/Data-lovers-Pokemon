@@ -1,27 +1,36 @@
-const data = POKEMON.pokemon;
-//const filtro = document.getElementById("")
+const divCards = document.getElementById("listaCards");
+const selectOrder = document.getElementById("ordenar");
 
-function filterItens(){
-    const x = document.getElementById("listaCards");
-    const y = data.map(poke => x.innerHTML  +=
-        `<div class = "box">
+window.onload = () => {
+  filterItens(dataPoke);
+};
+
+const dataPoke = POKEMON.pokemon;
+
+// Função para filtrar itens para formar o card
+function filterItens(dataPoke) {
+  divCards.innerHTML = dataPoke.map(poke => {
+    return `
+        <div class = "box">
             <h3 class = "namePoke"> ${poke.name}</>
             <h4> <img class= "imagePoke" src= ${poke.img}> </>
             <div class = "conteudoCard">
-                <fieldset>
-                    <p>Tipo: ${poke.type} </>
+                    <p>Tipo: ${poke.type.join(", ")} </>
                     <p>Ovo: ${poke.egg} </>
                     <p>Chance: ${poke.avg_spawns} % </>
-                    <p>Fraquezas: ${poke.weaknesses}</>
-                </fieldset>    
+                    <p>Fraquezas: ${poke.weaknesses.join(", ")}</>   
             </div>
-        </div>`);
+        </div>`;}).join("");
 }
-/*
-const $search = document.querySelector("#pesquisa");
 
-$search.addEventListener("input", filterItens);
-  */  
-
-
-  
+// Ordenação pelo select
+selectOrder.addEventListener("change", () => {
+  const selectValue = selectOrder.value;
+  const functionOrdena = window.sortData(dataPoke, "name", selectValue);
+  debugger;
+  if (selectValue === "none") {
+    filterItens(dataPoke);
+  } else {
+    filterItens(functionOrdena);
+  }
+});

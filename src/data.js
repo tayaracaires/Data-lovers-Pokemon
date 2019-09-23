@@ -1,20 +1,15 @@
-window.onload = () => filterItens();
+window.sortData = sortData;
 
-// filtro para a barra de busca unitária por nome
-const inputSearch = searchPoke($search.value, getName);
-
-function searchPoke (inputSearch , getName){
-  const result = getName.filter((poke) => {
-    return poke.name.toLowerCase().match(inputSearch.toLowerCase())
-  });
-  return result
+// função para ordenar
+function sortData(dataPoke, sortBy, sortOrder) {
+  let sizeSlice = dataPoke.slice(0, -1);
+  if (sortOrder == "select-A-Z") {
+    return sizeSlice.sort(function ordena(objOne, objTwo) {
+      return objOne[sortBy].localeCompare(objTwo[sortBy]);
+    });
+  } else if (sortOrder == "select-Z-A") {
+    return sizeSlice.sort(function ordena(objOne, objTwo) {
+      return objTwo[sortBy].localeCompare(objOne[sortBy]);
+    });
+  }
 }
-/*
-function getName(name){
-  const results = POKEMON.pokemon.map(item => item.name);
-  return results;
-}
-const data = POKEMON.pokemon;
-function filterTypes(data, name){
-  return data.filter(item => item.type.includes(name));
-}*/

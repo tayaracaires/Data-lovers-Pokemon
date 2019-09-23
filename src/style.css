@@ -9,16 +9,17 @@ body{
 header{
     width: 1287px;
     height: 310px;
-
     background-image: url(image.jpeg);
-    border: 1px solid #D6FFFD;
+    border: 1px solid rgb(0, 0, 0);
     box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 30px;
+    word-wrap: break-word;
 }
+
 #pesquisa{
-    margin-left: 42%;
+    margin-left: 65.5%;
     margin-right: -42%;
-    margin-top: 1%;    
+    margin-top: 0.3%;    
 }
 /*cards item*/
 
@@ -30,6 +31,7 @@ header{
     justify-content: center;
 }
 .box{
+    border: 1px solid rgb(0, 0, 0);
     width: 20%;
     height: auto;
     margin: 10px;
@@ -40,11 +42,14 @@ header{
     font-size: 14px;
 }
 .conteudoCard{
-
     padding: 2px;
     text-align: left;
     font-size: 14px;
     word-wrap: break-word;
 }
-
+#ordenar{
+    margin-left: 3%;
 }
+@media screen and (max-width: 800px) {
+
+    }

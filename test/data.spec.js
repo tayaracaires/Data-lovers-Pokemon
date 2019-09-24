@@ -1,5 +1,6 @@
 require("../src/data.js");
 
+// banco teste
 const dataPokeTest = [{
   "id": 1,
   "num": "001",
@@ -45,6 +46,7 @@ const dataPokeTest = [{
 }
 ];
 
+// teste para a função ordenar pelo nome
 describe("window.sortData", () => {
   it("is a function", () => {
     expect(typeof sortData).toBe("function");
@@ -57,3 +59,4 @@ describe("window.sortData", () => {
     );
   });
 });
+

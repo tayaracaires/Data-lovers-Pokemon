@@ -1,11 +1,10 @@
 require("../src/data.js");
 
-// banco teste
+// meu banco de dados para testes
 const dataPokeTest = [{
   "id": 1,
   "num": "001",
   "name": "Bulbasaur",
-  "img": "http://www.serebii.net/pokemongo/pokemon/001.png",
   "type": [
     "Grass",
     "Poison"
@@ -14,7 +13,6 @@ const dataPokeTest = [{
   "id": 2,
   "num": "002",
   "name": "Ivysaur",
-  "img": "http://www.serebii.net/pokemongo/pokemon/002.png",
   "type": [
     "Grass",
     "Poison"
@@ -23,7 +21,6 @@ const dataPokeTest = [{
   "id": 25,
   "num": "025",
   "name": "Pikachu",
-  "img": "http://www.serebii.net/pokemongo/pokemon/025.png",
   "type": [
     "Electric"
   ]
@@ -31,7 +28,6 @@ const dataPokeTest = [{
   "id": 27,
   "num": "027",
   "name": "Sandshrew",
-  "img": "http://www.serebii.net/pokemongo/pokemon/027.png",
   "type": [
     "Ground"
   ]
@@ -39,7 +35,6 @@ const dataPokeTest = [{
   "id": 50,
   "num": "050",
   "name": "Diglett",
-  "img": "http://www.serebii.net/pokemongo/pokemon/050.png",
   "type": [
     "Ground"
   ]
@@ -47,25 +42,86 @@ const dataPokeTest = [{
 ];
 
 // teste para a função ordenar pelo nome
-describe("window.sortData", () => {
+describe("app.sortData", () => {
   it("is a function", () => {
-    expect(typeof sortData).toBe("function");
+    expect(typeof app.sortData).toBe("function");
   });
-
   it("should return ordered Pokemon from A - Z", () => {
-    const sortNames = sortData(dataPokeTest, "name", "select-A-Z").map(pokemon => pokemon.name);
-    expect(sortNames).toEqual(["Bulbasaur", "Diglett", "Ivysaur", "Pikachu", "Sandshrew"]);
+    const sortNames = app.sortData(dataPokeTest, "name", "select-A-Z");
+    expect(sortNames).toEqual([{
+      "id": 1,
+      "num": "001",
+      "name": "Bulbasaur",
+      "type": [
+        "Grass",
+        "Poison"
+      ]
+    }, {
+      "id": 50,
+      "num": "050",
+      "name": "Diglett",
+      "type": [
+        "Ground"
+      ]
+    }, {
+      "id": 2,
+      "num": "002",
+      "name": "Ivysaur",
+      "type": [
+        "Grass",
+        "Poison"
+      ]
+    }, {
+      "id": 25,
+      "num": "025",
+      "name": "Pikachu",
+      "type": [
+        "Electric"
+      ]
+    }, {
+      "id": 27,
+      "num": "027",
+      "name": "Sandshrew",
+      "type": [
+        "Ground"
+      ]
+    }
+    ]);
   });
 });
 
-// //teste para a função filtrar pelo tipo
-// describe("window.filterTypes", () => {
-//   it("is a function", () => {
-//     expect(typeof filterTypes).toBe("function");
-//   });
+// teste para a função filtrar por nome - busca unitária
+describe("app.filterSearch", () => {
+  it("is a function", () => {
+    expect(typeof app.filterSearch).toBe("function");
+  });
+  it("must return filtered Pokemon by name", () => {
+    const searchName = app.filterSearch(dataPokeTest, "Pikachu");
+    expect(searchName).toEqual([{
+      "id": 25,
+      "num": "025",
+      "name": "Pikachu",
+      "type": [
+        "Electric"
+      ]}]
+    );
+  });
+});
 
-//   it("should return filtered Pokemon by eletric type", () => {
-//     const filtered = filterTypes(dataPokeTest, "type", "eletric").map(pokemon => pokemon.type);
-//     expect(filtered).toEqual(["Pikachu"]);
-//   });
-// });
+// teste para a função filtrar por tipo
+describe("app.filterTypes", () => {
+  it("is a function", () => {
+    expect(typeof app.filterTypes).toBe("function");
+  });
+  it("must return filtered Pokemon by name", () => {
+    const types = app.filterTypes(dataPokeTest, "Electric");
+    expect(types).toEqual([{
+      "id": 25,
+      "num": "025",
+      "name": "Pikachu",
+      "type": [
+        "Electric"
+      ]}]
+    );
+  });
+});

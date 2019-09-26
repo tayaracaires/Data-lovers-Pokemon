@@ -1,15 +1,16 @@
 const divCards = document.getElementById("listaCards");
 const divFilter = document.getElementById("orderType");
 const selectOrder = document.getElementById("orderName");
+const inputFilterName = document.getElementById("input-name");
 
 window.onload = () => {
-  filterItens(dataPoke);
+  showCards(dataPoke);
 };
 
 const dataPoke = POKEMON.pokemon;
 
 // Função para filtrar itens para formar o card
-function filterItens(data) {
+function showCards(data) {
   divCards.innerHTML = data.map(poke => {
     return `
         <div class = "box">
@@ -24,17 +25,20 @@ function filterItens(data) {
         </div>`;
   }).join("");
 }
+
 // Ordenação pelo select-name
 selectOrder.addEventListener("change", () => {
   const selectValue = selectOrder.value;
   const functionOrdena = window.sortData(dataPoke, "name", selectValue);
   if (selectValue === "none") {
-    filterItens(dataPoke);
+    showCards(dataPoke);
   } else {
-    filterItens(functionOrdena);
+    showCards(functionOrdena);
   }
 });
- 
-// função para filtrar por tipo
-divFilter.addEventListener("change", () => {filterItens(app.filterTypes(dataPoke, divFilter.value))});
 
+// evento select para o filtro de tipos
+divFilter.addEventListener("change", () => { showCards(filterTypes(dataPoke, divFilter.value)); });
+
+// evento input para o filtro de nome (busca unitária)
+inputFilterName.addEventListener("input", () => { showCards(filterSearch(dataPoke, inputFilterName.value)); });

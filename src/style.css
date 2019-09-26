@@ -15,10 +15,10 @@ header{
     border-radius: 30px;
     word-wrap: break-word;
 }
-
-#pesquisa{
-    margin-left: 65.5%;
-    margin-right: -42%;
+#sec-01{
+    overflow-y:hidden;
+}
+#faixa{
     margin-top: 0.3%;    
 }
 /*cards item*/

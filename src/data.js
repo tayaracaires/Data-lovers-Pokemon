@@ -1,8 +1,8 @@
-const app = {
-sortData: sortData,
-filterTypes: filterTypes,
-}
-
+window.app = {
+  sortData: sortData,
+  filterTypes: filterTypes,
+  filterSearch: filterSearch,
+};
 
 // função para ordenar
 function sortData(data, sortBy, sortOrder) {
@@ -18,7 +18,11 @@ function sortData(data, sortBy, sortOrder) {
   }
 }
 
-// função filtrar tipos
+// função para filtrar tipos
 function filterTypes(data, condition) {
   return data.filter(item => item.type.includes(condition));
+}
+// função para filtrar nomes
+function filterSearch(data, condition) {
+  return data.filter(item => item.name.includes(condition));
 }

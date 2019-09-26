@@ -1,6 +1,7 @@
 const divCards = document.getElementById("listaCards");
 const divFilter = document.getElementById("orderType");
 const selectOrder = document.getElementById("orderName");
+const stats = document.getElementById("porcentagem");
 
 window.onload = () => {
   filterItens(dataPoke);
@@ -35,6 +36,10 @@ selectOrder.addEventListener("change", () => {
   }
 });
  
-// função para filtrar por tipo
-divFilter.addEventListener("change", () => {filterItens(app.filterTypes(dataPoke, divFilter.value))});
+// função para filtrar por tipo com cálculo da porcentagem
+divFilter.addEventListener("change", () => {
+  const filtered= app.filterTypes(dataPoke, divFilter.value);
+  filterItens(filtrados);
+  stats.innerHTML=`<p>Os pokémon do tipo ${divFilter.value} representam ${statistics(filtrados, dataPoke)}% dos pokemóns da primeira geração.</>`;
+});
 

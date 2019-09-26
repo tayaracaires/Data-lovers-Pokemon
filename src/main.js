@@ -39,7 +39,7 @@ selectOrder.addEventListener("change", () => {
 // função para filtrar por tipo com cálculo da porcentagem
 divFilter.addEventListener("change", () => {
   const filtered= app.filterTypes(dataPoke, divFilter.value);
-  filterItens(filtrados);
-  stats.innerHTML=`<p>Os pokémon do tipo ${divFilter.value} representam ${statistics(filtrados, dataPoke)}% dos pokemóns da primeira geração.</>`;
+  filterItens(filtered);
+  stats.innerHTML=`<p>Os pokémon do tipo ${divFilter.value} representam ${statistics(filtered, dataPoke)}% dos pokemóns da primeira geração.</>`;
 });
 

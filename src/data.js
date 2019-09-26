@@ -26,3 +26,10 @@ function filterTypes(data, condition) {
 function filterSearch(data, condition) {
   return data.filter(item => item.name.includes(condition));
 }
+// função para o cáculo
+function statistics (data, dataAll){
+  let percentage = ((data.length*100)/dataAll.length).toFixed(2);
+  return percentage
+}
+
+

@@ -69,14 +69,3 @@ describe("window.sortData", () => {
 //     expect(filtered).toEqual(["Pikachu"]);
 //   });
 // });
-
-// // describe("window.statistics", () => {
-// //   it("is a function", () => {
-// //     expect(typeof statistics).toBe("function");
-// //   });
-
-// //   it("should return filtered Pokemon by eletric type", () => {
-// //     const filtered = filterTypes(dataPokeTest, "type", "eletric").map(pokemon => pokemon.type);
-// //     expect(filtered).toEqual(["Pikachu"]);
-// //   });
-// // });

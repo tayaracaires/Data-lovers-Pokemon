@@ -113,7 +113,7 @@ describe("app.filterTypes", () => {
   it("is a function", () => {
     expect(typeof app.filterTypes).toBe("function");
   });
-  it("must return filtered Pokemon by name", () => {
+  it("must return filtered Pokemon by type", () => {
     const types = app.filterTypes(dataPokeTest, "Electric");
     expect(types).toEqual([{
       "id": 25,
@@ -123,5 +123,22 @@ describe("app.filterTypes", () => {
         "Electric"
       ]}]
     );
+  });
+});
+// teste para a função de cáculo
+describe("app.statistics", () => {
+  it("is a function", () => {
+    expect(typeof app.statistics).toBe("function");
+  });
+  it("must return statistics by type", () => {
+    const filteredPokemon = [{
+      "id": 25,
+      "num": "025",
+      "name": "Pikachu",
+      "type": [
+        "Electric"
+      ]}];
+    const calculus = app.statistics(filteredPokemon, dataPokeTest);
+    expect(calculus).toBe("20.00");
   });
 });

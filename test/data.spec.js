@@ -54,9 +54,29 @@ describe("window.sortData", () => {
 
   it("should return ordered Pokemon from A - Z", () => {
     const sortNames = sortData(dataPokeTest, "name", "select-A-Z").map(pokemon => pokemon.name);
-    expect(sortNames).toEqual(["Bulbasaur", "Diglett", "Ivysaur", "Pikachu", "Sandshrew"]
-
-    );
+    expect(sortNames).toEqual(["Bulbasaur", "Diglett", "Ivysaur", "Pikachu", "Sandshrew"]);
   });
 });
 
+// //teste para a função filtrar pelo tipo
+// describe("window.filterTypes", () => {
+//   it("is a function", () => {
+//     expect(typeof filterTypes).toBe("function");
+//   });
+
+//   it("should return filtered Pokemon by eletric type", () => {
+//     const filtered = filterTypes(dataPokeTest, "type", "eletric").map(pokemon => pokemon.type);
+//     expect(filtered).toEqual(["Pikachu"]);
+//   });
+// });
+
+// // describe("window.statistics", () => {
+// //   it("is a function", () => {
+// //     expect(typeof statistics).toBe("function");
+// //   });
+
+// //   it("should return filtered Pokemon by eletric type", () => {
+// //     const filtered = filterTypes(dataPokeTest, "type", "eletric").map(pokemon => pokemon.type);
+// //     expect(filtered).toEqual(["Pikachu"]);
+// //   });
+// // });

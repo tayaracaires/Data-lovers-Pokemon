@@ -1,6 +1,6 @@
 require("../src/data.js");
 
-// banco teste
+// meu banco de dados para testes
 const dataPokeTest = [{
   "id": 1,
   "num": "001",

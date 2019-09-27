@@ -17,17 +17,17 @@ function showCards(data) {
       <h3 class="namePoke"> ${poke.name}</h3>
       <h4> <img class="imagePoke" src=${poke.img} /> </h4>
       <div class="conteudoCard">
-        <p>Tipo: ${poke.type.join(", ")}</p>
-        <p>Ovo: ${poke.egg}</p>
-        <p>Chance: ${poke.avg_spawns} % </p>
-        <p>Fraquezas: ${poke.weaknesses.join(", ")}</p>   
+          <p><strong>Tipo:</strong> ${poke.type.join(", ")}</p>
+          <p><strong>Ovo:</strong> ${poke.egg}</p>
+          <p><strong>Chance:</strong> ${poke.avg_spawns} % </p>
+          <p><strong>Fraquezas:</strong> ${poke.weaknesses.join(", ")}</p>   
       </div>
     </div>
   `).join("");
 }
 
 // Ordenação pelo select-name
-selectOrder.addEventListener("change", ({ target: { value } }) => {
+selectOrder.addEventListener("change", ({ target: { value }}) => {
   const functionOrdena = window.sortData(dataPoke, "name", value);
   if (value === "none") {
     showCards(dataPoke);

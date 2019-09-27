@@ -1,5 +1,5 @@
 body{
-    background: url(oi.jpg) no-repeat center center fixed;
+    background: url(fundoo.png) no-repeat center fixed;
     background-size: cover;
     -webkit-background-size: cover; /* SAFARI / CHROME */
     -moz-background-size: cover; /* FIREFOX */
@@ -8,16 +8,26 @@ body{
 }
 .imagePokeflix{
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 50px;
+    width: 430px;
+    height: 150px;
 }
-#faixa{
-    
-    margin-top: 0.3%;    
+.select-order{
+    margin-left: 1100px;
+    margin-top: -80px;    
+}
+.select-type{
+    margin-left: 680px;
+    margin-top: -29px;       
+}
+.input-search{
+    margin-left: 840px;
+    margin-top: -31px;      
 }
 /*cards item*/
 
 .container{
+    margin-top: 30px;
     display: flex;
     flex: 1;
     flex-direction: row;
@@ -25,15 +35,15 @@ body{
     justify-content: center;
 }
 .box{
-    border: 1px solid rgb(0, 0, 0);
-    width: 20%;
+    border: 3px solid rgb(73, 121, 8);
+    width: 15%;
     height: auto;
     margin: 10px;
-    padding: 10px;
-    background-image: url("v.jpg");
+    padding: 15px;
     border-radius: 10px;
     text-align: center;
-    font-size: 14px;
+    font-size: 16px;
+    background-color: #a3c82c63;
 }
 .conteudoCard{
     padding: 2px;
@@ -43,6 +53,13 @@ body{
 }
 #ordenar{
     margin-left: 3%;
+}
+#porcentagem{
+    margin-top: 6%;
+    font-size: 18px;
+    color: black;
+    font-weight: bold;
+    text-align: center;
 }
 @media screen and (max-width: 800px) {
 

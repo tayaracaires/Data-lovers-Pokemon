@@ -1,5 +1,5 @@
 body{
-    background: url(fundoo.png) no-repeat center fixed;
+    background: url(background.png) no-repeat center fixed;
     background-size: cover;
     -webkit-background-size: cover; /* SAFARI / CHROME */
     -moz-background-size: cover; /* FIREFOX */

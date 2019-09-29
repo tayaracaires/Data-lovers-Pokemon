@@ -2,10 +2,10 @@ window.app = {
   sortData,
   filterTypes,
   filterSearch,
-  statistics
+  statistics,
 };
 
-// função para ordenar
+// função para ordenar em ordem alfabética
 function sortData(data, sortBy, sortOrder) {
   const copiedArray = data.slice();
   if (sortOrder == "select-A-Z") {
@@ -31,4 +31,3 @@ function filterSearch(data, condition) {
 function statistics (dataType, data) {
   return ((dataType.length*100)/data.length).toFixed(2);
 }
-

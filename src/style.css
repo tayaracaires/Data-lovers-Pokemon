@@ -7,22 +7,33 @@ body{
     -o-background-size: cover; /* OPERA */
 }
 .imagePokeflix{
-    display: block;
+    
     margin-left: 50px;
     width: 430px;
     height: 150px;
 }
 .select-order{
-    margin-left: 1100px;
-    margin-top: -80px;    
+    display: flex;
+    flex:1;
+    flex-direction: row;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+ }
+.select-order-name{
+    margin: 10px;
+    height: auto;
 }
 .select-type{
-    margin-left: 680px;
-    margin-top: -29px;       
+    margin: 10px;
+    height: auto;
+}
+.select-spaw{
+    margin: 10px;
+    height: auto;
 }
 .input-search{
-    margin-left: 840px;
-    margin-top: -31px;      
+    margin: 10px;
+    height: auto;
 }
 /*cards item*/
 
@@ -43,7 +54,7 @@ body{
     border-radius: 10px;
     text-align: center;
     font-size: 16px;
-    background-color: #a3c82c63;
+    background-color: #fdfeff63;
 }
 .conteudoCard{
     padding: 2px;

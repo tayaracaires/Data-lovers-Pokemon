@@ -8,9 +8,7 @@
 * [4. Protótipos](#4-prototipos)
 * [5. Testes de usabilidade](#5-testes-de-usabilidade)
 * [6. Ferramentas utilizadas](#6-ferramentas-utilizadas)
-
-* [7. Link Pokémon!]
-(#7-link-pokémon)
+* [7. Link Pokémon!](#7-link-pokemon)
 
 
 ***
@@ -78,3 +76,4 @@ Para desenvolver essa aplicação, utilizamos as seguintes ferramentas:
 
 ## 7. Link Pokémon!
 
+https://gabrielaserodio.github.io/SAP003-data-lovers/src/index.html

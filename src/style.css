@@ -71,6 +71,14 @@ body{
     text-align: center;
 }
 @media screen and (min-width: 200px) and (max-width: 640px) {
+    body{
+        background: url(background.png) no-repeat center fixed;
+        background-size: cover;
+        -webkit-background-size: cover; /* SAFARI / CHROME */
+        -moz-background-size: cover; /* FIREFOX */
+        -ms-background-size: cover; /* IE */
+        -o-background-size: cover; /* OPERA */
+    }
     .imagePokeflix{
         margin-left: 0px;
         width: 340px;
@@ -101,9 +109,17 @@ body{
 } 
 
 @media screen and (min-width: 650px) and (max-width: 800px) {
-        .imagePokeflix{
-            margin-left: 90px;
-            height: 150px;  
+    body{
+        background: url(background.png) no-repeat center fixed;
+        background-size: cover;
+        -webkit-background-size: cover; /* SAFARI / CHROME */
+        -moz-background-size: cover; /* FIREFOX */
+        -ms-background-size: cover; /* IE */
+        -o-background-size: cover; /* OPERA */
+    }
+    .imagePokeflix{
+        margin-left: 90px;    
+        height: 150px;  
         }
         .select-order{
             display: inline-grid;

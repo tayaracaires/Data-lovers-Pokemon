@@ -5,7 +5,7 @@ window.app = {
   statistics,
 };
 
-// função para ordenar em ordem alfabética
+// função ordena em ordem alfabética
 function sortData(data, sortBy, sortOrder) {
   const copiedArray = data.slice();
   if (sortOrder == "select-A-Z") {

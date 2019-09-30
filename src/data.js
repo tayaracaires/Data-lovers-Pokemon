@@ -18,7 +18,6 @@ function sortData(data, sortBy, sortOrder) {
     });
   }
 }
-
 // função para filtrar tipos
 function filterTypes(data, condition) {
   return data.filter(item => item.type.includes(condition));

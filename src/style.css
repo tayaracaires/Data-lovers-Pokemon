@@ -7,9 +7,8 @@ body{
     -o-background-size: cover; /* OPERA */
 }
 .imagePokeflix{
-    
-    margin-left: 50px;
-    width: 430px;
+    margin-left: 0px;
+    width: 345px;
     height: 150px;
 }
 .select-order{
@@ -22,18 +21,17 @@ body{
 .select-order-name{
     margin: 10px;
     height: auto;
+    display: grid;
 }
 .select-type{
     margin: 10px;
     height: auto;
-}
-.select-spaw{
-    margin: 10px;
-    height: auto;
+    display: grid;
 }
 .input-search{
     margin: 10px;
     height: auto;
+    display: grid;
 }
 /*cards item*/
 
@@ -72,6 +70,55 @@ body{
     font-weight: bold;
     text-align: center;
 }
-@media screen and (max-width: 800px) {
-
+@media screen and (min-width: 200px) and (max-width: 640px) {
+    .imagePokeflix{
+        margin-left: 0px;
+        width: 340px;
+        height: 150px;
     }
+    .select-order{
+        display: grid;
+        justify-content: initial; 
+     }
+    .select-order-name{
+        margin: 10px;
+        height: auto;
+    }
+    .select-type{
+        margin: 10px;
+        height: auto;
+    }
+    .input-search{
+        margin: 10px;
+        height: auto;
+    }
+    .container{
+        margin-top: 30px;
+    }
+    .box{
+        width: 60%;
+    }
+} 
+
+@media screen and (min-width: 650px) and (max-width: 800px) {
+        .imagePokeflix{
+            margin-left: 90px;
+            height: 150px;  
+        }
+        .select-order{
+            display: inline-grid;
+            margin-top: 5%;
+         }
+        .container{
+            margin-top: 30px;
+            flex: 1;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            display: flex;
+        }
+        .box{
+            width: 20%;
+        }
+        } 
+    

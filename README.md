@@ -9,30 +9,39 @@
 * [5. Testes de usabilidade](#5-testes-de-usabilidade)
 * [6. Ferramentas utilizadas](#6-ferramentas-utilizadas)
 
+* [7. Link Pokémon!]
+(#7-link-pokémon)
+
 
 ***
 
 ## 1. Sobre o projeto
 Esta aplicação foi desenvolvida com base em um banco de dados pré-selecionado.
-A partir da base de dados foram desenvolvidas funcionalidades de acordo com as necessidades do usuário.
+A partir da base de dados foram desenvolvidas funcionalidades de acordo com as necessidades e histórias do usuário.
 
 ## 2. Histórias de usuários
 **_Personas:_**
 
-_Paloma_: tem 22 anos e joga Pokémon GO nas horas livres, no trajeto entre a faculdade e a sua casa. No jogo, tem como objetivo conseguir capturar todos os pokémons e precisa ter acesso as informações de maneira rápida.
+_Paloma_: 22 anos e joga Pokémon GO nas horas livres, no trajeto entre a faculdade e a sua casa. No jogo, tem como objetivo conseguir capturar todos os pokémons e precisa ter acesso as informações de maneira rápida, como qual a chance de um pokémon aparecer no mesmo local.
 
-_Rafael_: tem 13 e é um jogador ativo, com o objetico de dominar um ginásio. Para isso, precisa ter fácil acesso as informações de um pokémon específico.
+_Rafael_: 13 e é um jogador ativo, com o objetico de dominar um ginásio. Para isso, precisa ter fácil acesso as informações de um pokémon específico, como fraquezas e qual o seu tipo. 
 
 **_Histórias:_**
 
-_1_: como usuário, deseja vizualizar todos os pokémons e suas informações ao abrir a aplicação.
-_2_: como usuário, deseja ordernar todos os pokémons por ordem alfabética crescente e decrescente.
-_3_: como usuário, deseja filtrar os pokémons por tipo.
-_4_: como usuário, deseja buscar um pokémon pelo nome.
-_5_: como usuário, deseja obter as estatísticas sobre cada tipo de pokémon.
+Como usuário, desejo...
+
+_1_: Vizualizar todos os pokémons e suas informações ao abrir a aplicação.
+
+_2_: Ordernar todos os pokémons por ordem alfabética crescente e decrescente.
+
+_3_: Filtrar os pokémons por tipo.
+
+_4_: Buscar um pokémon pelo nome.
+
+_5_: Obter as estatísticas sobre cada tipo de pokémon.
 
 ## 3. Funcionalidades da aplicação
-Após definir as personas e criar as histórias de usuários, estabelecemos quais dados serias mostrados nos cards e quais funcionalidades seriam desenvolvidas.
+Após definir as personas e criar as histórias de usuários, estabelecemos quais dados seriam mostrados nos cards e quais funcionalidades seriam desenvolvidas.
 
 * Filtrar por tipo ou nome
 * Ordernar 
@@ -66,3 +75,6 @@ Para desenvolver essa aplicação, utilizamos as seguintes ferramentas:
 * GitHub
 * Visual Studio Code
 * Jest
+
+## 7. Link Pokémon!
+

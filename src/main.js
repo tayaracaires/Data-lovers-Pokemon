@@ -1,53 +1,57 @@
-const divCards = document.getElementById("listaCards");
-const divFilter = document.getElementById("orderType");
-const selectOrder = document.getElementById("orderName");
+const divCards = document.getElementById("list-cards");
+const divFilter = document.getElementById("order-type");
+const selectOrder = document.getElementById("order-name");
 const inputFilterName = document.getElementById("input-name");
-const stats = document.getElementById("porcentagem");
-
-window.onload = () => {
-  showCards(dataPoke);
-};
+const stats = document.getElementById("percentage");
 
 const dataPoke = POKEMON.pokemon;
 
-// Função para filtrar itens para formar o card
-function showCards(data) {
+window.onload = () => {
+  showCards(dataPoke);
+  populateDropdown(dataPoke);
+};
+
+const populateDropdown = (pokemons) => {
+  const pokemonsType = pokemons.map(poke => poke.type).flat();
+  const uniqueTypes = [...new Set(pokemonsType)];
+  const optionsLayout = uniqueTypes.map(type => `
+    <option value=${type}>${type}</option>`).join("");
+  document.querySelector("#order-type").innerHTML = optionsLayout;
+};
+
+const showCards = (data) => {
   divCards.innerHTML = data.map(poke => `
-    <div class="box">
-      <h3 class="namePoke"> ${poke.name}</h3>
-      <h4> <img class="imagePoke" src=${poke.img} /> </h4>
-      <div class="conteudoCard">
+    <section class="box">
+      <h3 class="name-poke"> ${poke.name}</h3>
+      <img class="image-poke" src=${poke.img} />
+      <div class="content-card">
           <p><strong>Tipo:</strong> ${poke.type.join(", ")}</p>
           <p><strong>Ovo:</strong> ${poke.egg}</p>
           <p><strong>Chance:</strong> ${poke.avg_spawns} % </p>
           <p><strong>Fraquezas:</strong> ${poke.weaknesses.join(", ")}</p>   
       </div>
-    </div>
+    </section>
   `).join("");
-}
+};
 
-// Ordenação pelo select-name
 selectOrder.addEventListener("change", ({ target: { value }}) => {
   const functionOrdena = window.sortData(dataPoke, "name", value);
-  if (value === "none") {
-    showCards(dataPoke);
-  } else {
-    showCards(functionOrdena);
-  }
+  value === "none" ? showCards(dataPoke) : showCards(functionOrdena);
 });
 
-// função para filtrar por tipo com cálculo da porcentagem
 divFilter.addEventListener("change", () => {
-  const filtered = window.filterTypes(dataPoke, divFilter.value);
+  const filtered = window.filterSearch(dataPoke, divFilter.value, "type");
   showCards(filtered);
   stats.innerHTML = `
-    <p>
+    <p class="text-percentage">
       Os pokémons do tipo ${divFilter.value} representam ${statistics(filtered, dataPoke)}% dos pokemóns da primeira geração.
     </p>`;
 });
 
-// evento select para o filtro de tipos
-divFilter.addEventListener("change", () => { showCards(filterTypes(dataPoke, divFilter.value)); });
+divFilter.addEventListener("change", (e) => { 
+  showCards(filterSearch(dataPoke, e.target.value, "type"));
+});
 
-// evento input para o filtro de nome (busca unitária)
-inputFilterName.addEventListener("input", () => { showCards(filterSearch(dataPoke, inputFilterName.value)); });
+inputFilterName.addEventListener("input", (e) => {
+  showCards(filterSearch(dataPoke, e.target.value, "name")); 
+});

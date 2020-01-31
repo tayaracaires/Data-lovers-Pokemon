@@ -1,56 +1,34 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-  <meta charset="utf-8">
-  <title>Pokémon!</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-
-<body>
-  <header>
-    <img src="pokemon.png" class="imagePokeflix" />
-    <div class="select-order">
-      <select id="orderName" class="select-order-name">
-        <option value="none">Ordenar por:</option>
-        <option value="select-A-Z">A - Z</option>
-        <option value="select-Z-A">Z - A</option>
-      </select>
-      <div class="input-search">
-        <input id="input-name" placeholder="pesquise por nome">
-      </div>
-      <div class="select-type">
-        <select id="orderType">
-          <option value="none">Filtrar por tipo:</option>
-          <option value="Bug">Bug</option>
-          <option value="Dragon">Dragon</option>
-          <option value="Electric">Electric</option>
-          <option value="Fighting">Fighting</option>
-          <option value="Flying">Flying</option>
-          <option value="Fire">Fire</option>
-          <option value="Ghost">Ghost</option>
-          <option value="Grass">Grass</option>
-          <option value="Ground">Ground</option>
-          <option value="Ice">Ice</option>
-          <option value="Normal">Normal</option>
-          <option value="Poison">Poison</option>
-          <option value="Psychic">Psychic</option>
-          <option value="Rock">Rock</option>
-          <option value="Water">Water</option>
-        </select>
-      </div>     
-    </div>
-  </header>
-  <main>
-    <div id="porcentagem"></div>
-    <div class="container" id="listaCards"></div>
-    <div id="filtro"></div>
-  </main>
-
-  <script src="data/pokemon/pokemon.js"></script>
-  <script src="main.js"></script>
-  <script src="data.js"></script>
-
-</body>
-
+  <head>
+    <meta charset="utf-8">
+    <title>Pokémon</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <section class="container-header">
+        <div class="section-image">
+          <img src="./imagens/image.jpeg" class="image-pokeflix" />
+        </div>
+        <div class="section-search">
+          <select id="order-name" class="order-name">
+            <option value="none">Ordenar por:</option>
+            <option value="select-A-Z">A - Z</option>
+            <option value="select-Z-A">Z - A</option>
+          </select>
+          <input id="input-name" class="input-name" placeholder=" ex: Pikachu">
+          <select id="order-type" class="order-type"></select>
+        </div>
+      </section>
+    </header>
+    <main>
+      <section id="percentage" class="percentage"></section>
+      <section id="list-cards" class="container"></section>
+      <section id="filtro"></section>
+    </main>
+    <script src="data/pokemon/pokemon.js"></script>
+    <script src="main.js"></script>
+    <script src="data.js"></script>
+  </body>
 </html>

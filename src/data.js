@@ -1,11 +1,9 @@
 window.app = {
   sortData,
-  filterTypes,
   filterSearch,
   statistics,
 };
 
-// função ordena em ordem alfabética
 function sortData(data, sortBy, sortOrder) {
   const copiedArray = data.slice();
   if (sortOrder == "select-A-Z") {
@@ -17,16 +15,12 @@ function sortData(data, sortBy, sortOrder) {
       return objTwo[sortBy].localeCompare(objOne[sortBy]);
     });
   }
-}
-// função para filtrar tipos
-function filterTypes(data, condition) {
-  return data.filter(item => item.type.includes(condition));
-}
-// função para filtrar nomes
-function filterSearch(data, condition) {
-  return data.filter(item => item.name.includes(condition));
-}
-// função para o cáculo
+};
+
+function filterSearch(data, condition, key) {
+  return data.filter(item => item[key].includes(condition));
+};
+
 function statistics (dataType, data) {
   return ((dataType.length*100)/data.length).toFixed(2);
-}
+};

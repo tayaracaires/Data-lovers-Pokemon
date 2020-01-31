@@ -96,7 +96,7 @@ describe("app.filterSearch", () => {
     expect(typeof app.filterSearch).toBe("function");
   });
   it("must return filtered Pokemon by name", () => {
-    const searchName = app.filterSearch(dataPokeTest, "Pikachu");
+    const searchName = app.filterSearch(dataPokeTest, "Pikachu", "name");
     expect(searchName).toEqual([{
       "id": 25,
       "num": "025",
@@ -106,15 +106,8 @@ describe("app.filterSearch", () => {
       ]}]
     );
   });
-});
-
-// teste para a função filtrar por tipo
-describe("app.filterTypes", () => {
-  it("is a function", () => {
-    expect(typeof app.filterTypes).toBe("function");
-  });
   it("must return filtered Pokemon by type", () => {
-    const types = app.filterTypes(dataPokeTest, "Electric");
+    const types = app.filterSearch(dataPokeTest, "Electric", "type");
     expect(types).toEqual([{
       "id": 25,
       "num": "025",
@@ -125,6 +118,7 @@ describe("app.filterTypes", () => {
     );
   });
 });
+
 // teste para a função de cáculo
 describe("app.statistics", () => {
   it("is a function", () => {

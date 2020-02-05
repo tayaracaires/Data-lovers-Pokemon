@@ -92,14 +92,14 @@ select{
         margin-right: auto;
     }
 
-     .section-search{
+    .section-search{
         flex-direction: column;
         margin-top: 2%;
         flex-wrap: wrap;
         display: inline;
         justify-content: center;
     }
-  
+
     .select-order{
         display: grid;
         justify-content: initial; 
@@ -152,3 +152,4 @@ select{
         width: 20%;
     }
 }
+

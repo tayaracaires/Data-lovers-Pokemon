@@ -52,11 +52,8 @@ Após criar e desenvolver as personas e as histórias de usuários, fizemos um e
 
 _Foto do layout_ 
 
-![layout](src/playout.jpg)
+![layout](src/images/playout.jpg)
 
-_Foto do card_
-
-![card](src/pcard.jpg)
 
 ## 5. Testes de usabilidade
 Foram desenvolvidos e realizados testes de usabilidade, para identificar possíveis problemas. Ao realizar os testes, pudemos identificar uma falha em uma determinada função e conseguimos corrigi-lo. 
@@ -76,4 +73,4 @@ Para desenvolver essa aplicação, utilizamos as seguintes ferramentas:
 
 ## 7. Link Pokémon!
 
-https://gabrielaserodio.github.io/SAP003-data-lovers/src/index.html
+https://tayaracaires.github.io/Data-lovers-Pokemon/src/index.html

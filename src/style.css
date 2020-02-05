@@ -9,10 +9,12 @@ body{
 
 .section-image{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
 }
 
 .image-pokeflix{
+    margin-left: auto;
+    margin-right: auto;
     height: 44vh;
     box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 30px;
@@ -84,11 +86,20 @@ select{
 
 @media screen and (min-width: 200px) and (max-width: 640px) {
     .image-pokeflix{
-        margin-left: 0px;
         width: 340px;
         height: 150px;
+        margin-left: auto;
+        margin-right: auto;
     }
 
+     .section-search{
+        flex-direction: column;
+        margin-top: 2%;
+        flex-wrap: wrap;
+        display: inline;
+        justify-content: center;
+    }
+  
     .select-order{
         display: grid;
         justify-content: initial; 
@@ -120,7 +131,8 @@ select{
 
 @media screen and (min-width: 650px) and (max-width: 800px) {
     .image-pokeflix{
-        margin-left: 90px;    
+        margin-left: 90px;
+        margin-right: auto;  
         height: 150px;  
     }
     

@@ -52,7 +52,7 @@ Após criar e desenvolver as personas e as histórias de usuários, fizemos um e
 
 _Foto do layout_ 
 
-![layout](src/images/playout.jpg)
+![layout](src/imagens/playout.jpg)
 
 
 ## 5. Testes de usabilidade
